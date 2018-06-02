@@ -1,5 +1,3 @@
-#ifdef MUD_MODULES
-
 #include <assert.h>
 #include <stdint.h>
 #include <float.h>
@@ -57,5 +55,3 @@ export import std.memory;
 //#include <obj/Util/LocklessQueue.h>
 //#include <obj/Util/Timer.h>
 //#include <obj/Util/Updatable.h>
-
-#endif
