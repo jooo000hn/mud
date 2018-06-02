@@ -16,6 +16,10 @@
 
 namespace mud
 {
+	using uchar = unsigned char;
+	using ushort = unsigned short;
+	using uint = unsigned int;
+
 	template <typename T, typename = int>
 	struct is_string_convertible : std::false_type { };
 
@@ -38,8 +42,8 @@ namespace mud
 	template <> inline void string_to_type(const string& str, int& val) { val = std::stoi(str); }
 	template <> inline void string_to_type(const string& str, long& val) { val = std::stoi(str); }
 	template <> inline void string_to_type(const string& str, long long& val) { val = std::stoi(str); }
-	template <> inline void string_to_type(const string& str, unsigned char& val) { val = unsigned char(std::stoi(str)); }
-	template <> inline void string_to_type(const string& str, unsigned short& val) { val = unsigned short(std::stoi(str)); }
+	template <> inline void string_to_type(const string& str, unsigned char& val) { val = uchar(std::stoi(str)); }
+	template <> inline void string_to_type(const string& str, unsigned short& val) { val = ushort(std::stoi(str)); }
 	template <> inline void string_to_type(const string& str, unsigned int& val) { val = std::stoi(str); }
 	template <> inline void string_to_type(const string& str, unsigned long& val) { val = std::stoi(str); }
 	template <> inline void string_to_type(const string& str, unsigned long long& val) { val = std::stoi(str); }
