@@ -23,6 +23,11 @@ function mud_defines()
             "MUD_NO_GLM",
         }
         
+    configuration { "cpp-modules", "clang" }
+        buildoptions {
+            "-fmodules-ts",
+        }
+    
     configuration { "windows", "not asmjs" }
         defines { "MUD_PLATFORM_WINDOWS" }
         
@@ -96,11 +101,22 @@ function mud_module(name, root_path, subpath, preproc_name)
     
     mud_defines()
     
-    configuration { "cpp-modules" }
+    configuration { "cpp-modules", "vs*" }
         files {
             path.join(module_path, "Module.ixx"),
         }
             
+    configuration { "cpp-modules", "clang" }
+        -- clang -fmodules-ts -std=c++17 --precompile -o stuff.pcm module.cppm 
+        
+        buildoptions {
+            "-fmodule-file=" .. path.join(module_path, "Module.pcm")
+        }
+        
+        files {
+            path.join(module_path, "Module.pcm"),
+        }
+        
     configuration {}
 end
 

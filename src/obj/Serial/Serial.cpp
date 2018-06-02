@@ -228,21 +228,25 @@ namespace mud
 
 		if(!constructor)
 		{
+			auto unpack_member = [&](const Member& member, const json& member_value)
+			{
 #ifdef MUD_DEBUG_SERIAL
-			printf("DEBUG: unpacking member %s :: %s\n", value.type().m_name, member.m_name);
+				printf("DEBUG: unpacking member %s :: %s\n", value.type().m_name, member.m_name);
 #endif
+				member.set(value, unpack(unpacker, *member.m_type, member_value));
+			};
 
 			if(json_value.is_object())
 				for(const Member& member : cls.m_members)
-					if(json_value[member.m_name].is_null()) //.count(string(member.m_name)))
+					if(!json_value[member.m_name].is_null())
 					{
-						member.set(value, unpack(unpacker, *member.m_type, json_value[member.m_name]));
+						unpack_member(member, json_value[member.m_name]);
 					}
 
 			if(json_value.is_array())
 				for(size_t index = 0; index < size; ++index)
 				{
-					cls.m_members[index].set(value, unpack(unpacker, *cls.m_members[index].m_type, json_value[index]));
+					unpack_member(cls.m_members[index], json_value[index]);
 				}
 		}
 		else
