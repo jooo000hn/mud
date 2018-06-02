@@ -23,7 +23,7 @@ function mud_defines()
             "MUD_NO_GLM",
         }
         
-    configuration { "cpp-modules", "clang" }
+    configuration { "cpp-modules", "*-clang*" }
         buildoptions {
             "-fmodules-ts",
         }
@@ -106,7 +106,7 @@ function mud_module(name, root_path, subpath, preproc_name)
             path.join(module_path, "Module.ixx"),
         }
             
-    configuration { "cpp-modules", "clang" }
+    configuration { "cpp-modules", "*-clang*" }
         -- clang -fmodules-ts -std=c++17 --precompile -o stuff.pcm module.cppm 
         
         buildoptions {
