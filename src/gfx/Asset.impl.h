@@ -156,6 +156,6 @@ namespace mud
 		};
 
 		system().visit_files(path, visit_file);
-		system().visit_folders(path, visit_file);
+		system().visit_folders(path, visit_folder);
 	}
 }
