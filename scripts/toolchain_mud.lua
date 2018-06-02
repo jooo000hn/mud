@@ -112,7 +112,7 @@ function mud_module(name, root_path, subpath, preproc_name)
             
     configuration { "cpp-modules", "*-clang*" }
         buildoptions {
-            "-fmodule-file=($OBJDIR)" .. path.join(subpath, "Module.pcm")
+            "-fmodule-file=$(OBJDIR)" .. path.join(subpath, "Module.pcm")
         }
         
         files {
