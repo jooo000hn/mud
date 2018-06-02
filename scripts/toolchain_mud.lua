@@ -111,11 +111,6 @@ function mud_module(name, root_path, subpath, preproc_name)
         }
             
     configuration { "cpp-modules", "*-clang*" }
-        -- clang -fmodules-ts -std=c++17 --precompile -o stuff.pcm module.cppm 
-        "clang -fmodules-ts -std=c++17 --precompile -o $(OBJDIR)/" .. path.join(subpath, "Module.pcm") .. " " path.join(module_path, "Module.cppm")
-        "clang -fmodules-ts -std=c++17 --precompile -o ../../linux32_clang/obj/x32/Debug/mud/obj/Module.pcm ../../../src/obj/Module.cppm"
-        
-        
         buildoptions {
             "-fmodule-file=" .. path.join(module_path, "Module.pcm")
         }
