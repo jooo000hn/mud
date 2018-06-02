@@ -5,7 +5,7 @@
 #pragma once
 
 #ifndef MUD_CPP_20
-#include <algorithm>
+#include <functional>
 
 namespace std
 {
