@@ -76,8 +76,8 @@ namespace mud
 	template <> _func_ vec3 divide<vec3>(vec3 a, vec3 b);
 #endif
 
-	template <class T>
-	export_ struct _refl_ _struct_ Range
+	export_ template <class T>
+	struct _refl_ _struct_ Range
 	{
 		Range() {}
 		Range(T min, T max) : m_min(min), m_max(max) {}
