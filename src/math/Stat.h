@@ -109,8 +109,8 @@ namespace mud
 		inline void multiply(T multiplier) { self()->def().multiply(this->m_value, this->m_base, multiplier); }
 	};
 
-	template <class T>
-	export_ class _refl_ AutoStat
+	export_ template <class T>
+	class _refl_ AutoStat
 	{
 	public:
 		AutoStat(T value = T(), T min = std::numeric_limits<T>::lowest(), T max = std::numeric_limits<T>::max(), T step = T(1))
