@@ -42,7 +42,7 @@ namespace mud
 		operator size_t() const { return size_t(m_index); }
 
 		size_t m_index = SIZE_MAX;
-		uvec2 m_grid_index = { SIZE_MAX, SIZE_MAX };
+		uvec2 m_grid_index = { UINT_MAX, UINT_MAX };
 	};
 
 	export_ struct _refl_ MUD_UI_EXPORT TextSelection
