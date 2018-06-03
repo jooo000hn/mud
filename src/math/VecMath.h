@@ -375,7 +375,7 @@ namespace mud
 //$pycgen-end
 
 	template <class T> inline typename T::type* value_ptr(T& v) { return &v[0]; }
-	template <class T> inline typename const T::type* value_ptr(const T& v) { return &v.f[0]; }
+	template <class T> inline const typename T::type* value_ptr(const T& v) { return &v.f[0]; }
 
 	// Experimental swizzling
 	template <typename T> inline typename T::type2 xy(const T& v)
