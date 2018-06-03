@@ -8,7 +8,7 @@
 #include <functional>
 #include <memory>
 #include <fstream>
-#include <stream>
+#include <sstream>
 
 export module mud.math;
 
