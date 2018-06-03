@@ -11,7 +11,7 @@
 #include <functional>
 #endif
 
-export_ namespace mud
+namespace mud
 {
 	export_ using cstring = const char*;
 	export_ using FunctionPointer = void* (*)();
