@@ -630,6 +630,8 @@ class Generator(object):
         
         self.render_mako(module, "Module.h")
         self.render_mako(module, "Module.cpp")
+        self.render_mako(module, "Module.ixx")
+        self.render_mako(module, "Module.cppm")
             
         def register_classes(cursor, file, module, parent):
             for c in cursor.get_children():

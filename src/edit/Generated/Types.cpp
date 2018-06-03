@@ -29,17 +29,6 @@ namespace mud
     template <> MUD_EDIT_EXPORT Type& type<mud::ToolOption>() { static Type ty("ToolOption"); return ty; }
     template <> MUD_EDIT_EXPORT Type& type<mud::ViewerController>() { static Type ty("ViewerController"); return ty; }
     template <> MUD_EDIT_EXPORT Type& type<mud::Viewer>() { static Type ty("Viewer", type<mud::Widget>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::SpaceSheet>() { static Type ty("SpaceSheet", type<mud::RootSheet>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::CopyAction>() { static Type ty("CopyAction", type<mud::TranslateAction>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::CircleBrush>() { static Type ty("CircleBrush", type<mud::Brush>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::PlaceBrush>() { static Type ty("PlaceBrush", type<mud::Brush>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::ScriptedBrush>() { static Type ty("ScriptedBrush", type<mud::Brush>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::SceneViewer>() { static Type ty("SceneViewer", type<mud::Scene>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::TransformAction>() { static Type ty("TransformAction", type<mud::EditorAction>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::ViewAction>() { static Type ty("ViewAction", type<mud::EditorAction>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::WorkPlaneAction>() { static Type ty("WorkPlaneAction", type<mud::EditorAction>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::PlaneSnapOption>() { static Type ty("PlaneSnapOption", type<mud::ToolOption>()); return ty; }
-    template <> MUD_EDIT_EXPORT Type& type<mud::WorldSnapOption>() { static Type ty("WorldSnapOption", type<mud::ToolOption>()); return ty; }
     template <> MUD_EDIT_EXPORT Type& type<mud::RedoTool>() { static Type ty("RedoTool", type<mud::Tool>()); return ty; }
     template <> MUD_EDIT_EXPORT Type& type<mud::UndoTool>() { static Type ty("UndoTool", type<mud::Tool>()); return ty; }
     template <> MUD_EDIT_EXPORT Type& type<mud::ViewportTool>() { static Type ty("ViewportTool", type<mud::Tool>()); return ty; }
@@ -55,4 +44,15 @@ namespace mud
     template <> MUD_EDIT_EXPORT Type& type<mud::RotateTool>() { static Type ty("RotateTool", type<mud::TransformTool>()); return ty; }
     template <> MUD_EDIT_EXPORT Type& type<mud::ScaleTool>() { static Type ty("ScaleTool", type<mud::TransformTool>()); return ty; }
     template <> MUD_EDIT_EXPORT Type& type<mud::TranslateTool>() { static Type ty("TranslateTool", type<mud::TransformTool>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::CopyAction>() { static Type ty("CopyAction", type<mud::TranslateAction>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::CircleBrush>() { static Type ty("CircleBrush", type<mud::Brush>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::PlaceBrush>() { static Type ty("PlaceBrush", type<mud::Brush>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::ScriptedBrush>() { static Type ty("ScriptedBrush", type<mud::Brush>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::PlaneSnapOption>() { static Type ty("PlaneSnapOption", type<mud::ToolOption>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::WorldSnapOption>() { static Type ty("WorldSnapOption", type<mud::ToolOption>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::TransformAction>() { static Type ty("TransformAction", type<mud::EditorAction>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::ViewAction>() { static Type ty("ViewAction", type<mud::EditorAction>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::WorkPlaneAction>() { static Type ty("WorkPlaneAction", type<mud::EditorAction>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::SpaceSheet>() { static Type ty("SpaceSheet", type<mud::RootSheet>()); return ty; }
+    template <> MUD_EDIT_EXPORT Type& type<mud::SceneViewer>() { static Type ty("SceneViewer", type<mud::Scene>()); return ty; }
 }

@@ -107,7 +107,7 @@ function mud_module(name, root_path, subpath, preproc_name)
     
     configuration { "cpp-modules", "vs*" }
         files {
-            path.join(module_path, "Module.ixx"),
+            path.join(module_path, "Generated/Module.ixx"),
         }
             
     configuration { "cpp-modules", "*-clang*" }
@@ -116,7 +116,7 @@ function mud_module(name, root_path, subpath, preproc_name)
         }
         
         files {
-            path.join(module_path, "Module.pcm"),
+            path.join(module_path, "Generated/Module.cppm"),
         }
         
     configuration {}
