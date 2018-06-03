@@ -31,6 +31,10 @@ function mud_defines()
         buildoptions {
             "-fmodules-ts",
         }
+        
+        defines {
+            "MUD_MODULES",
+        }
     
     configuration { "windows", "not asmjs" }
         defines { "MUD_PLATFORM_WINDOWS" }
