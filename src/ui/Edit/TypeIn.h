@@ -14,6 +14,7 @@
 #include <vector>
 #include <memory>
 #include <cinttypes>
+#include <climits>
 //#include <inttypes.h>
 #endif
 
