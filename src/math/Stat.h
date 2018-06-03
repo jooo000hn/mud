@@ -161,8 +161,8 @@ namespace mud
 		StatDef<T> m_def;
 	};
 
-	template export_ class _refl_ MUD_MATH_EXPORT AutoStat<int>;
-	template export_ class _refl_ MUD_MATH_EXPORT AutoStat<float>;
+	export_ template class _refl_ MUD_MATH_EXPORT AutoStat<int>;
+	export_ template class _refl_ MUD_MATH_EXPORT AutoStat<float>;
 
 	export_ struct _refl_ MUD_MATH_EXPORT Ratio : public DefStat<float, Ratio>
 	{
